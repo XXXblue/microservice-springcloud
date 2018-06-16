@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="microservice-discovery-eureka" />
+        <module name="microservice-simple-consumer-movie (1)" />
+        <module name="microservice-simple-consumer-movie-feign" />
+        <module name="microservice-simple-provider-user" />
+      </profile>
+      <profile name="Annotation profile for microservice-springcloud" enabled="true">
+        <sourceOutputDir name="../microservice-simple-consumer-movie-feign/target/generated-sources/annotations" />
+        <sourceTestOutputDir name="../microservice-simple-consumer-movie-feign/target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="microservice-simple-consumer-movie" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="microservice-discovery-eureka" target="1.8" />
+      <module name="microservice-simple-consumer-movie" target="1.8" />
+      <module name="microservice-simple-consumer-movie (1)" target="1.8" />
+      <module name="microservice-simple-consumer-movie-feign" target="1.8" />
+      <module name="microservice-simple-provider-user" target="1.8" />
+      <module name="microservice-springcloud" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

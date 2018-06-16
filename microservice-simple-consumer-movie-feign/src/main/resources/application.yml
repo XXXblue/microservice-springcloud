@@ -1,0 +1,31 @@
+server:
+  port: 8010
+spring:
+  output:
+    ansi:
+      enabled: DETECT
+  application:
+    name: microservice-consumer-movie-feign
+eureka:
+  client:
+    healthcheck:
+      enabled: true
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka
+  instance:
+    prefer-ip-address: true
+    #增加超时时间，避免第一次访问报超时异常
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 5000
+logging:
+  level:
+    com:
+      itmuch:
+        cloud:
+          microservicesimpleconsumermovie:
+            UserFeignClient: DEBUG

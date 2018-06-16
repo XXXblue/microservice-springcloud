@@ -1,0 +1,21 @@
+server:
+  port: 8010
+spring:
+  application:
+    name: microservice-consumer-movie
+eureka:
+  client:
+     service-url:
+       defaultZone: http://localhost:8761/eureka
+  instance:
+      prefer-ip-address: true
+
+#ribbon脱离eureka使用
+ribbon:
+  eureka:
+   enabled: false
+   #配置自定义ribbon规则
+microservice-provider-user:
+  ribbon:
+    listOfServers: localhost:7900
+

@@ -1,0 +1,13 @@
+server:
+  port: 8761
+eureka:
+  client:
+  #这个注解表示不要把该eureka server当成eureka客户端 因为eureka server之间是需要互相通信的，需要有client的功能，我们现在是单机版，因此先把eureka server仅当做server
+    register-with-eureka: false
+    fetch-registry: false
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+      #由于单机模式经常会因为环境问题使Eureka进入自我保护模式，因此我们先关闭Eureka的自我保护功能并配置Eureka Server清理无效节点的时间间隔。
+  server:
+    enable-self-preservation: false
+    eviction-interval-timer-in-ms: 4000
